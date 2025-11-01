@@ -138,17 +138,12 @@ public class DanhSachPhuongTien {
                 pw.printf("| %-15s | %-20s | %-20s | %-15d | %-15d |\n",
                 dspt[i].getMaPT(), dspt[i].getLoaiPT(), dspt[i].getTenPT(), dspt[i].getSoCho(), dspt[i].getGiaPT());
             }
+            pw.println("+---------------------------------------------------------------------------------------------------+");
+            System.out.println("Da xuat file danh sach phuong tien thanh cong!");
         }
         catch (IOException e) {
             System.out.println("Loi khi xuat file: " + e.getMessage());
         }
     }
-    public static void main(String[] args) {
-        DanhSachPhuongTien dsp = new DanhSachPhuongTien();
-        dsp.themPhuongTien(new PhuongTien("PT01", "Xe", "Xe du lich 45 cho", 45, 2000000));
-        dsp.themPhuongTien(new PhuongTien("PT02", "Tau", "Tau cao toc", 100, 5000000));
-        dsp.themPhuongTien(new PhuongTien("PT03", "May bay", "Boeing 737", 180, 15000000));
-
-        dsp.xuatFileDanhSachPhuongTien();
-    }
 }
+
